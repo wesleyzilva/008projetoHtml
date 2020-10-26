@@ -15,53 +15,67 @@
     <h1 style="background: brown;">
         Aula sobre tabelas em html
     </h1>
+    <style>
+        thead {
+            background-color: aqua;
+        }
+
+        tbody {
+            background-color: blueviolet;
+        }
+    </style>
     <p>
         As tabelas também podem receber caracterização e estilos de acordo com o CSS.
     </p>
 </head>
 
 <body>
-    <h1 style="color: blueviolet;">Tabela SEM elementos semânticos</h1>
+    <h1 style="color: blueviolet;">Tabela COM elementos semânticos</h1>
     <p>
     <ul>
         &lt;tabela&gt;Tabela é um conjunto de linhas e colunas &lt;/table&gt;
         <ul>
-            <li> &lt;th&gt; Dados de cabeçalho &lt;/th&gt; </li>
             <li>
-                &lt;tr&gt; Estrutura da tabela &lt;/tr&gt;
+                &lt;thead&gt; Conteúdo/Dados da célula &lt;/tdhead&gt;
             </li>
             <li>
-                &lt;td&gt; Conteudo/Dados da célula &lt;/td&gt;
+                &lt;tbody&gt; Conteudo/Dados da célula &lt;/tdbody&gt;
             </li>
+            <li>
+                &lt;tfoot&gt; Conteudo/Dados da célula &lt;/tdfoot&gt;
+            </li>
+
         </ul>
+
     </ul>
     </p>
 
     <p style="font-size: xx-small;">
     <table>
-        <tr align="center">
+        <!--Mantém a estrutura para paginação/impressão-->
+        <thead align="center" style="color: crimson;">
             <th>Coluna01</th>
             <th>Coluna02</th>
             <th>Coluna03</th>
             <th>Coluna04</th>
 
-        </tr>
-        <tr align="center">
+        </thead>
+        <tbody align="center">
             <td>dados da coluna01</td>
             <td>dados da coluna02</td>
             <td>dados da coluna03</td>
-        </tr>
-        <tr align="center">
+        </tbody>
+        <tbody align="center">
             <td colspan="2" align="center">colunas mescladas</td>
             <td rowspan="2" align="center">linhas mescladas</td>
             <td>dados da coluna04</td>
-        </tr>
-        <tr align="center">
+        </tbody>
+        <tbody align="center">
             <td>dados da coluna01</td>
             <td>dados da coluna02</td>
-            <td colspan="2" align="center">coluna mesclada</td>
+            <td colspan="2" align="center">colunas mescladas</td>
 
-        </tr>
+        </tbody>
         </p>
 </body>
 
