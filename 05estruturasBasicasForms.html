@@ -34,27 +34,30 @@
     &lt;form&gt; Tag de formulário &lt;/form&gt;
 
     <p>
-    <form>
-        <p>
-        <h2>
-            Formulário de texto:
-        </h2>
-        <ul>
-            <li>
-                Rótulo tem que ser criado (label) dentro do formulário e necessáriamente precisa estar associado a um
-                input
-                e id.
-            </li>
-            <li>
-                Para iniciar com um valor padrão utilize o parâmetro "value".
-            </li>
-            <li>
-                Observe os parâmetros do input para que o formulário fique de uma forma mais amigável com a interface
-                utilizando size, placeholder, password e outros...
-            </li>
-        </ul>
+    <h2>
+        Formulário de texto:
+    </h2>
+    <p>
+    <ul>
+        <li>
+            Rótulo tem que ser criado (label) dentro do formulário e necessáriamente precisa estar associado a um
+            input
+            e id.
+        </li>
+        <li>
+            Para iniciar com um valor padrão utilize o parâmetro "value".
+        </li>
+        <li>
+            Observe os parâmetros do input para que o formulário fique de uma forma mais amigável com a interface
+            utilizando size, placeholder, password e outros...
+        </li>
+        <li>
+            O label está associado ao id do input.</li>
+    </ul>
 
-        </p>
+    </p>
+
+    <form>
         <label for="campoNome" style="color: crimson;">Nome: </label>
         <input type="text" id="campoNome" value="Valor padrão de nome já definido previamente." size="36">
         <br>
@@ -76,6 +79,118 @@
 
     </form>
     </p>
+
+    <p>
+    <h2>
+        Formulário de caixa de seleção:
+    </h2>
+    <p>
+        Para um checkbox alguns pontos são importantes:
+    <ul>
+        <li>No input do tipo checkbox:</li>
+        <li>ID: é a identificação única do checkbox;</li>
+        <li>NAME: é o nome/chave do campo valor á ser enviado;</li>
+        <li>VALUE: é o valor que será enviado;</li>
+    </ul>
+    RESUMO: O conteúdo do VALUE do nome NAME será enviado ao servidor para processamento.
+    </p>
+    <form style="margin-left: auto;">
+        <label> Interesses: </label><br>
+        <input type="checkbox" id="IdCheckBox01" name="nameMusica" value="valueMusica">
+        <label for="IdCheckBox01">Música</label><br>
+        <input type="checkbox" id="IdCheckBox02" name="nameLivros" value="valueLivros">
+        <label for="IdCheckBox02">Livros</label><br>
+    </form>
+    </p>
+    <p>
+    <h2>
+        Formulário de radioButton:
+    </h2>
+    A definição do input pode ser de diversos tipos.
+    Para o radioButton a Chave usada no atributo Name é utilizada para agrupar diversas opções ou para multiplas
+    seleções.
+    <br>
+    O atributo
+    <p>
+    <form> Formulário agrupado (UM OU OUTRO) com o mesmo valor no atributo NAME: <br>
+        <input type="radio" name="ChaveNameDefinida" id="IdUnicoDoRadioButton01">
+        <label for="IdUnicoDoRadioButton01">labelDoInput01</label><br>
+        <input type="radio" name="ChaveNameDefinida" id="IdUnicoDoRadioButton02">
+        <label for="IdUnicoDoRadioButton02">labelDoInput02</label><br>
+        <input type="reset" name="ChaveNameDefinida" value="Limpar">
+        <input type="submit" name="ChaveNameDefinida" value="Enviar">
+    </form>
+    </p>
+    <p>
+        Observações:
+    <ul>
+        <li>
+            No atributo INPUT com o tipo como SUBMIT observe ao clicar em no botão ENVIAR a URL é codificada com o
+            parâmetro enviado.
+        </li><br>
+        http://localhost/ProjetosPhp/05estruturasBasicasForms.html?ChaveNameDefinida=on&ChaveNameDefinida=Enviar
+        <br>
+        <br>
+        <li>
+            Observe que temos o atributo Checked caso queiram iniciar uma seleção previamente selecionada.
+        </li>
+    </ul>
+    </p>
+    <p>
+    <form> Formulário multipla seleção (UM E OUTRO) com valores distintos no atributo NAME: <br>
+        <input type="radio" name="ChaveNameDefinida01" id="IdUnicoDoRadioButton01">
+        <label for="IdUnicoDoRadioButton01">labelDoInput01</label><br>
+        <input type="radio" name="ChaveNameDefinida02" id="IdUnicoDoRadioButton02">
+        <label for="IdUnicoDoRadioButton02">labelDoInput02</label><br>
+        <input type="radio" name="ChaveNameDefinida03" id="IdUnicoDoRadioButton03">
+        <label for="IdUnicoDoRadioButton03">labelDoInput03</label><br>
+        <input type="radio" name="ChaveNameDefinida04" id="IdUnicoDoRadioButton04" checked>
+        <label for="IdUnicoDoRadioButton04">labelDoInput04</label><br>
+        <input type="radio" name="ChaveNameDefinida05" id="IdUnicoDoRadioButton05" checked>
+        <label for="IdUnicoDoRadioButton05">labelDoInput05</label><br>
+        <input type="reset" name="ChaveNameDefinida01" name="ChaveNameDefinida02" value="Limpar">
+        <input type="submit" name="ChaveNameDefinida01" name="ChaveNameDefinida02" value="Enviar">
+    </form>
+    </p>
+    </p>
+    <p>
+    <h2>
+        Formulário de área de descrição:
+    </h2>
+    Área de descrição de conteúdo de Strings á ser enviado ao servidor.
+    <br>
+    A área da caixa de texto tem tamanho definido por quantidade de colunas e linhas.
+    <p>
+    <form>
+        <label for="idAreaDescricao">Área de texto aberto abaixo:</label><br>
+        <textarea name="areaDeDescricao" id="idAreaDescricao" cols="30" rows="5" style="background: chartreuse;"
+            placeholder="Digite a descrição do seu texto nesta caixa de textos."></textarea><br>
+        <input type="reset" name="areaDeDescricao" value="Limpar">
+        <input type="submit" name="areaDeDescricao" value="Enviar">
+    </form>
+
+    <p>O conteúdo da URL com o conteúdo da caixa de texto codificado em utf-8 após clicar em enviar. <br><br>
+        http://localhost/ProjetosPhp/05estruturasBasicasForms.html?areaDeDescricao=conteudo+da+caixa+de+sele%C3%A7%C3%A3o&areaDeDescricao=Enviar</p>
+    <p>
+    <h2>
+        Formulário de seleção:
+    </h2>
+
+    <p>
+    <form>
+        <label>Seleção baseado em lista suspensa.</label>
+        <br>
+        <select name="campoName" id="IdSelectListaSuspensa">
+            <option value="valorOpcao01doSelect">labelValorOpcao01doSelect</option>
+            <option value="valorOpcao02doSelect">labelValorOpcao02doSelect</option>
+            <option value="valorOpcao03doSelect">labelValorOpcao03doSelect</option>
+        </select><br>
+        <input type="reset" name="areaDeDescricao" value="Limpar">
+        <input type="submit" name="areaDeDescricao" value="Enviar">
+    </form>
+    <p>http://localhost/ProjetosPhp/05estruturasBasicasForms.html?campoName=valorOpcao01doSelect&areaDeDescricao=Enviar</p>
+    </p>
+
 </body>
 
 <footer>
