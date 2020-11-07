@@ -170,7 +170,8 @@
     </form>
 
     <p>O conteúdo da URL com o conteúdo da caixa de texto codificado em utf-8 após clicar em enviar. <br><br>
-        http://localhost/ProjetosPhp/05estruturasBasicasForms.html?areaDeDescricao=conteudo+da+caixa+de+sele%C3%A7%C3%A3o&areaDeDescricao=Enviar</p>
+        http://localhost/ProjetosPhp/05estruturasBasicasForms.html?areaDeDescricao=conteudo+da+caixa+de+sele%C3%A7%C3%A3o&areaDeDescricao=Enviar
+    </p>
     <p>
     <h2>
         Formulário de seleção:
@@ -188,9 +189,38 @@
         <input type="reset" name="areaDeDescricao" value="Limpar">
         <input type="submit" name="areaDeDescricao" value="Enviar">
     </form>
-    <p>http://localhost/ProjetosPhp/05estruturasBasicasForms.html?campoName=valorOpcao01doSelect&areaDeDescricao=Enviar</p>
+    <p>http://localhost/ProjetosPhp/05estruturasBasicasForms.html?campoName=valorOpcao01doSelect&areaDeDescricao=Enviar
     </p>
-
+    </p>
+    <p>
+    <h2>
+        Resumo de chamada ao clicar no botão enviar para identificação na URL:
+    </h2>
+    <p>
+    <form>
+        <label for="nameDescricao">Label da descrição do formulário de texto</label>
+        <br>
+        <input type="text" name="nameDescricao" id="idDescricao" placeholder="Digite o conteúdo."><br>
+        <label for="nameSelect">Label da descrição do formulário de select</label>
+        <br>
+        <select name="nameSelect" id="idSelectForm">
+            <option value="valorDaOpcao01">labelValorDaOpcao01</option>
+            <option value="valorDaOpcao01">labelValorDaOpcao02</option>
+        </select><br><br>
+        <input type="radio" name="nameRadio" id="idRadio01">
+        <label for="idRadio01">labelRadio01</label><br>
+        <input type="radio" name="nameRadio" id="idRadio02">
+        <label for="idRadio02">labelRadio02</label><br>
+        <input type="submit" value="enviarDadosUrl" alt="Dados serão enviados ao servidor no botão enviar.">
+    </form>
+    <p>
+        http://localhost/ProjetosPhp/05estruturasBasicasForms.html?nameDescricao=Wesley+Silva+%21%21%21&nameSelect=valorDaOpcao01&nameRadio=on
+        <br>
+        <br>
+        http://localhost/ProjetosPhp/05estruturasBasicasForms.html?nameDescricao=Wesley+Silva+%21%21%21&nameSelect=valorDaOpcao01
+    </p>
+    </p>
+    </p>
 </body>
 
 <footer>
