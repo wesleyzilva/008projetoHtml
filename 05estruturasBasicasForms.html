@@ -1,0 +1,84 @@
+<!--Estruturas básicas de um site-->
+
+<!DOCTYPE html>
+<!--Tipo da linguagem-->
+<html>
+<!--Layout do html-->
+<meta charset="utf-8">
+<!--Conversão de linguagem do teclado-->
+<!--Identação da página no código é utilizada para facilitar a visualização-->
+
+<head>
+    <title>
+        HTML: Aula sobre Formulários
+    </title>
+    <h1 style="background: brown;">
+        Aula sobre formulários em html
+    </h1>
+    <style>
+        thead {
+            background-color: aqua;
+        }
+
+        tbody {
+            background-color: blueviolet;
+        }
+    </style>
+    <p>
+        Os formulários também podem receber caracterização e estilos de acordo com o CSS.
+    </p>
+</head>
+
+<body>
+    <h1 style="color: blueviolet;">Formulários de entrada de dados e envio ao Servidor</h1>
+    &lt;form&gt; Tag de formulário &lt;/form&gt;
+
+    <p>
+    <form>
+        <p>
+        <h2>
+            Formulário de texto:
+        </h2>
+        <ul>
+            <li>
+                Rótulo tem que ser criado (label) dentro do formulário e necessáriamente precisa estar associado a um
+                input
+                e id.
+            </li>
+            <li>
+                Para iniciar com um valor padrão utilize o parâmetro "value".
+            </li>
+            <li>
+                Observe os parâmetros do input para que o formulário fique de uma forma mais amigável com a interface
+                utilizando size, placeholder, password e outros...
+            </li>
+        </ul>
+
+        </p>
+        <label for="campoNome" style="color: crimson;">Nome: </label>
+        <input type="text" id="campoNome" value="Valor padrão de nome já definido previamente." size="36">
+        <br>
+        <!--Parâmetro para quebra de linha-->
+        <label for="campoSobrenome" style="color: crimson">Sobrenome: </label>
+        <input type="text" id="campoSobrenome" placeholder="Digite aqui o Segundo nome da pessoa." size="36">
+        <br><br>
+
+        </p>
+        <label for="campoUsuario" style="color: darkgreen;">Usuário: </label>
+        <br>
+        <input type="text" id="campoUsuario" placeholder="Digite seu usuário." size="15">
+        <br>
+        <br>
+        <!--Parâmetro para quebra de linha-->
+        <label for="campoSenha" style="color: darkgreen">Senha: </label><br>
+        <input type="password" id="campoSenha" placeholder="Digite sua senha." size="15">
+        <br>
+
+    </form>
+    </p>
+</body>
+
+<footer>
+</footer>
+
+</html>
